@@ -14,7 +14,7 @@ public class HomeController : Controller
     {
         _logger = logger;
         _repository = repository;
-        message = config["MESSAGE"] ?? "Essential Docker";
+        message =  $"Essential Docker ({config["HOSTNAME"]})";
     }
 
     public IActionResult Index()
